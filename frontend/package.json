@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@dom-native/draggable": "^0.2.1",
-    "@dom-native/ui": "file:../../../_projects/__dom-native/dom-native-ui_src",
+    "@dom-native/ui": "^0.3.0-alpha.2",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@tauri-apps/api": "^2.0.0-beta.0",
-    "@tauri-apps/plugin-dialog": "^2.0.0-beta.2",
+    "@tauri-apps/plugin-dialog": "^2.0.0-beta.3",
     "debounce": "^2.0.0",
     "deep-object-diff": "^1.1.9",
-    "dom-native": "file:../../../_projects/__dom-native/dom-native_src",
+    "dom-native": "^0.11.4",
     "rollup-plugin-typescript2": "^0.36.0",
     "utils-min": "^0.2.4"
   },
@@ -31,11 +31,11 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@tauri-apps/cli": "^2.0.0-beta.0",
     "@types/bun": "latest",
-    "json-schema-to-typescript": "^13.1.2",
+    "json-schema-to-typescript": "^14.0.4",
     "pcss-cli": "^0.2.9",
-    "rollup": "^4.13.0",
+    "rollup": "^4.17.2",
     "sketchdev": "^0.7.5",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   }
 }

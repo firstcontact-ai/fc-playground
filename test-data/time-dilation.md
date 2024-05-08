@@ -1,0 +1,12 @@
+Time dilation is a fascinating phenomenon described by Albert Einstein’s theory of relativity, which explains how time is affected by two main factors: gravity and relative velocity. Both forms of time dilation arise due to differences in the spacetime environment and can be observed in various contexts, including satellites orbiting the Earth.
+
+## Gravitational Time Dilation:
+Gravity affects the passage of time. According to Einstein’s general theory of relativity, the stronger the gravitational field, the slower time moves relative to a region with weaker gravity. This phenomenon is known as gravitational time dilation. For instance, an observer near a massive object, like a planet or star, would experience time more slowly compared to an observer further away. This effect is measurable in the Global Positioning System (GPS) satellites, which orbit the Earth at an altitude of about 20,000 kilometers. Here, gravity is weaker than on Earth's surface, so clocks on these satellites tick slightly faster than those on the ground.
+
+## Velocity Time Dilation:
+In special relativity, time also dilates for objects moving at high velocities relative to an observer. The faster an object travels, the more time slows down for that object compared to a stationary observer. For satellites in orbit, this effect is also present because they are traveling at high speeds, around 14,000 kilometers per hour for GPS satellites. As a result, their onboard clocks tick more slowly compared to those on the ground.
+
+## Combined Effects:
+For satellites, both gravitational and velocity time dilation occur simultaneously. However, these effects oppose each other. The gravitational time dilation tends to speed up the satellite clocks due to the weaker gravitational field in orbit, while the velocity time dilation slows them down due to their high orbital speed. In the case of GPS satellites, the gravitational effect outweighs the velocity effect, so their clocks tick faster compared to clocks on Earth.
+
+Overall, GPS satellites experience more time dilation from the weaker gravity than from their high speed, leading to a net increase in their clock rates relative to clocks on the ground. Without accounting for these relativistic effects, GPS systems would produce significant errors in positioning.

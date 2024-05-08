@@ -6,13 +6,15 @@
 - A more stable version of the code might be published later once core use cases start to crystallize.
 - Requires:
 
-| **Requirement** | **Note/Installation**                      |
-|-----------------|---------------------------------------|
-| **Rust**        | For all backend and tooling           |
-| **nodejs/tsc**  | For all frontend and frontend tooling |
-| **awesome-cli** | `cargo install awesome-cli`           |
-| **webdev**      | `cargo install webdev`                |
-| **tauri-cli**   | `cargo install tauri-cli`             |
+| **Requirement** | **Note/Installation**                   |
+|-----------------|-----------------------------------------|
+| **Rust**        | For all backend and tooling             |
+| **nodejs/tsc**  | For all frontend and frontend tooling   |
+| **awesome-cli** | `cargo install awesome-cli`             |
+| **webdev**      | `cargo install webdev`                  |
+| **tauri-cli**   | `cargo install tauri-cli@2.0.0-beta.16` |
+
+- make sure to do do a `npm install` from `frontends/`
 
 # Last note on the Data Model (might be outdated)
 
