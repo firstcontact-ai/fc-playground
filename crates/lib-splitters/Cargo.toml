@@ -1,0 +1,15 @@
+[package]
+name = "lib-splitters"
+edition = "2021"
+rust-version = "1.76"
+version = "0.1.0"
+
+[lib]
+doctest = false
+
+[lints]
+workspace = true
+
+[dependencies]
+# -- Others
+derive_more = {workspace = true}

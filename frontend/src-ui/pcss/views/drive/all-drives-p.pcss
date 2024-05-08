@@ -1,0 +1,46 @@
+ all-drives-p {
+
+ 	display: grid;
+ 	grid-template-rows: auto 1fr;
+
+ 	& > header {
+ 		font-size: 1.25rem;
+ 		font-weight: 600;
+
+ 		display: grid;
+
+ 		align-items: center;
+ 		grid-template-rows: 3rem 4rem;
+
+ 		h1 {
+ 			color: var(--txt-50);
+ 			font-weight: 600;
+ 			text-transform: uppercase;
+ 			letter-spacing: .04em;
+ 		}
+
+ 		d-input {
+ 			height: 2rem;
+ 			min-height: 2.5rem;
+ 		}
+
+ 	}
+
+
+ 	& > section {
+ 		padding: 1rem 1rem;
+ 		display: grid;
+
+ 		/* grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr; */
+ 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+ 		gap: 1rem;
+
+
+ 		& > section {
+ 			border: solid 1px #555;
+ 			border-radius: .5rem;
+ 			padding: 1rem .5rem;
+ 		}
+ 	}
+ }

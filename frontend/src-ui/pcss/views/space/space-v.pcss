@@ -1,0 +1,138 @@
+space-v {
+
+	display: grid;
+	grid-template-columns: 16rem 1fr;
+	gap: 1rem;
+
+	& > .ctrl-bar {
+		background: var(--bkg-40);
+		border-radius: var(--rad-panel);
+		display: grid;
+		grid-template-rows: 1fr auto .5fr;
+		gap: 0rem;
+
+		& > .box {
+			padding: .5rem 1rem;
+
+			display: grid;
+			grid-template-rows: 3rem 1fr;
+			gap: .75rem;
+
+			& > h3 {
+				border-bottom: solid 1px var(--bdr);
+			}
+
+			& > section {
+				overflow: auto;
+			}
+
+		}
+
+		.box-drive {
+			.box-drive-content {
+
+				display: grid;
+				grid-template-rows: 1fr auto;
+				gap: 1rem;
+
+				.dsources-content {
+					overflow: auto;
+				}
+
+				.drive-info {
+					cursor: pointer;
+					padding: .5rem;
+					text-align: center;
+					color: var(--txt-40);
+					border: dashed 1px var(--bdr-60);
+
+					&:hover {
+						color: var(--txt-link);
+					}
+				}
+
+			}
+
+			&.dragover {
+				.drive-info {
+					color: var(--txt-link);
+				}
+			}
+		}
+
+
+		.box-agents-content {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	& > .content {
+		display: grid;
+	}
+
+	agent-item {
+		cursor: pointer;
+		width: 10rem;
+		display: grid;
+		padding: .5rem 0;
+		grid-template-rows: auto auto;
+		align-items: center;
+		justify-items: center;
+		background-color: var(--bkg-30);
+		border-radius: var(--rad);
+
+		d-ico {
+			height: 2.5rem;
+			width: 2.5rem;
+		}
+
+		label {
+			padding: 0 .25rem;
+			display: block;
+			cursor: pointer;
+
+			max-width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			font-weight: 600;
+			color: var(--txt-30);
+		}
+
+		&:hover {
+			d-ico {
+				fill: var(--clr-prime);
+			}
+
+			label {
+				color: var(--txt-prime);
+			}
+		}
+	}
+
+
+}
+
+
+
+dsource-c {
+	display: grid;
+	grid-template-columns: 2rem 1fr;
+	grid-template-rows: 2rem;
+	align-items: center;
+	gap: .25rem;
+
+	d-ico {
+		min-height: 1.5rem;
+		min-width: 1.5rem;
+		fill: var(--clr-prime);
+	}
+
+	label {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

@@ -1,0 +1,42 @@
+selector-pop {
+	position: absolute;
+	background: red;
+	width: auto;
+	height: auto;
+
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+	overflow: auto;
+
+	h3 {
+		font-size: 1rem;
+		padding: .5rem;
+	}
+
+	.delim {
+		display: block;
+		border-bottom: solid 1px var(--bdr);
+		margin: .25rem 0;
+	}
+
+	.item {
+		cursor: pointer;
+		padding: 1rem;
+		display: block;
+
+		white-space: nowrap;
+		/* Prevents the text from wrapping onto the next line */
+		overflow: hidden;
+		/* Hides the text that overflows the container */
+		text-overflow: ellipsis;
+
+		&:hover {
+			background: var(--bkg-hover);
+		}
+	}
+
+	.link {
+		font-weight: 500;
+	}
+}

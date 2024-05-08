@@ -1,0 +1,72 @@
+nav-p {
+	display: grid;
+
+	nav-h {
+		padding-left: 1rem;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		color: var(--txt);
+		font-size: 1.25rem;
+
+
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+
+	}
+
+	& > section {
+		display: grid;
+		grid-auto-rows: minmax(min-content, max-content);
+		gap: 1rem;
+		padding: 1rem 0 1rem 0;
+
+		background: var(--bkg-40);
+		border-radius: var(--rad-panel);
+		overflow: auto;
+
+		nav-item {
+			cursor: pointer;
+			padding: 0.5rem 1rem;
+			display: grid;
+			grid-template-columns: 2rem 1fr auto;
+			align-items: center;
+
+
+			d-ico {
+				width: 1.75rem;
+				height: 1.75rem;
+			}
+
+			d-ico.opts {
+				width: 1.25rem;
+				height: 1.25rem;
+				opacity: 0;
+			}
+
+			&:hover,
+			&.sel {
+				d-ico.opts {
+					opacity: 1;
+				}
+			}
+
+
+			label {
+				cursor: pointer;
+			}
+
+			&.sel {
+				background: var(--bkg-sel);
+				font-weight: 600;
+
+				d-ico:nth-child(1) {
+					fill: var(--ico-sel);
+				}
+			}
+
+		}
+
+	}
+}

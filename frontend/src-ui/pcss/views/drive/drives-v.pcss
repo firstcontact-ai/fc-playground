@@ -1,0 +1,43 @@
+drives-v {
+  padding: 2rem 3rem;
+  margin: 0 0 1rem 0;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  /* grid-template-rows: var(--main-header-height) 3rem 1fr; */
+  gap: 2rem;
+
+  section.main {
+    display: grid;
+  }
+
+}
+
+drives-nav {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: start;
+
+  a {
+    padding: 0 .5rem;
+    height: 3rem;
+    display: grid;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.all {
+      border-bottom: solid 3px #333;
+    }
+
+    &.sel {
+      color: var(--txt-sel);
+      font-weight: 600;
+    }
+  }
+
+  & > section {
+    display: contents;
+  }
+}

@@ -1,0 +1,59 @@
+[package]
+name = "lib-core"
+version = "0.0.0"
+edition = "2021"
+rust-version = "1.75"
+
+[lib]
+doctest = false
+
+[lints] 
+workspace = true
+
+[features]
+for-test = ["tabled", "pretty-sqlite"]
+for-ts = ["schemars"]
+with-rpc = ["rpc-router"]
+
+[dependencies]
+# -- App Libs
+lib-utils = { path = "../lib-utils", features = ["for-ts", "for-sql"] }
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- Event
+flume = { workspace = true }
+# -- Json
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_with = { workspace = true }
+# -- Files
+simple-fs = { workspace = true }
+# -- DB
+sea-query = { workspace = true }
+sea-query-rusqlite = { workspace = true }
+rusqlite = { workspace = true }
+modql = { workspace = true }
+# -- Tracing
+tracing = { workspace = true }
+
+# -- Others
+derive_more = { workspace = true }
+time = { workspace = true }
+strum = { workspace = true }
+
+# -- Feature: with-rpc
+rpc-router = { workspace = true, optional = true }
+
+# -- Feature: for-ts
+schemars = {workspace = true, optional = true}
+
+# -- for-test features
+tabled = {version = "0.15", optional = true}
+pretty-sqlite = { version = "0.0.1", optional = true }
+# pretty-sqlite = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-pretty-sqlite", optional = true }
+
+
+[dev-dependencies]
+tabled = "0.15"
+# pretty-sqlite = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-pretty-sqlite" }
+pretty-sqlite = { version = "0.0.1"}

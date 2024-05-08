@@ -1,0 +1,100 @@
+# -- Base
+.*
+!.gitignore
+
+*.lock
+*.log
+
+# -- Rust
+target/
+# !Cargo.lock # commented by default
+!.cargo/
+crates/app-desktop/gen
+
+# -- App Specifics
+frontend/dist-ui/js/
+frontend/dist-ui/css/
+
+*.png
+!app-icon.png
+
+*.js
+!rollup.config.js
+!pcss.config.js
+!sketchdev.config.js
+
+*.css
+
+# -- Safety net
+dist/
+out/
+
+# Data Files
+*.db3
+*.parquet
+*.map
+*.zip
+*.gz
+*.tar
+*.tgz
+*.vsix
+
+# Videos
+*.mov
+*.mp4
+*.avi
+
+# Images
+*.icns
+*.ico
+*.jpeg
+*.jpg
+*.bmp
+
+# -- Nodejs
+node_modules/
+!.mocharc.yaml
+report.*.json
+bun.lockb
+package-lock.json
+
+# -- Python
+__pycache__/
+
+
+# -- others
+_*
+# '_' in src dir, ok.
+!src/**/_*
+!crates/**/_*
+
+# Allows .env (make sure only dev info) 
+# !.env # Commented by default
+
+# Allow vscode
+# !.vscode # Commented by default
+
+
+# -- From Tauri
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+*.lockb
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

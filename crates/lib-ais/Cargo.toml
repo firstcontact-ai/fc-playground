@@ -1,0 +1,50 @@
+[package]
+name = "lib-ais"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.76"
+
+[lib]
+doctest = false
+
+[lints] 
+workspace = true
+
+[features]
+for-test = []
+for-ts = ["schemars"]
+with-rpc = ["rpc-router"]
+
+
+[dependencies]
+# -- App Libs
+lib-core = { path = "../lib-core"}
+lib-utils = { path = "../lib-utils"}
+# -- Async
+tokio = {  workspace = true }
+async-trait ={  workspace = true }
+futures = {  workspace = true }
+tokio-stream = {  workspace = true }
+# -- Data
+modql = { workspace = true }
+# -- Json
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_with = { workspace = true }
+# -- Tracing
+tracing = { workspace = true }
+# -- AI
+ollama-rs = {version = "=0.1.9", features = ["stream"]}
+async-openai = "0.20"
+# -- Others
+derive_more = { workspace = true}
+enum_dispatch = "0.3"
+
+# -- Feature: with-rpc
+rpc-router = { workspace = true, optional = true }
+
+# -- Feature: for-ts
+schemars = {workspace = true, optional = true}
+
+[dev-dependencies]
+lib-core = { path = "../lib-core", features = ["for-test"]}

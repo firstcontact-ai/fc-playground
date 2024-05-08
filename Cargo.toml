@@ -1,0 +1,67 @@
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+# -- for xp dev
+unused = "allow" 
+
+[workspace.lints.clippy]
+# new_without_default = "allow"
+
+[profile.release]
+strip = true
+
+[workspace]
+resolver = "2"
+members = [
+    # -- libs
+    "crates/lib-utils", 
+    "crates/lib-core", 
+    "crates/lib-rpc",
+    "crates/lib-ais",
+    "crates/lib-workers",
+    "crates/lib-splitters",
+
+
+    # -- apps
+    "crates/app-desktop", 
+
+    # -- For test
+    "crates/lib-test-utils",
+
+    # -- tools
+    "crates/tools/ts-types", 
+]
+
+[workspace.dependencies]
+# -- Async
+tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+tokio-stream = "0.1.5"
+# -- Event
+flume = { version = "0.11", features = ["async"] }
+# -- Json
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = { version = "3", features = ["macros", "time_0_3"]  }
+# -- Tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+# -- Data
+sea-query = { version = "0.31.0-rc", features = ["thread-safe", "with-json"] }
+sea-query-rusqlite = { version = "0.6.0-rc", features = ["with-time", "with-json"]}
+rusqlite = { version = "0.31", features = [ "bundled"] }
+# modql = { version = "0.4.0-rc.4", features = ["with-sea-query", "with-rusqlite"] }
+modql = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-modql", features = [ "with-sea-query", "with-rusqlite"] }
+# -- Files
+simple-fs = { version = "0.1.3", features = ["full"] }
+# simple-fs = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-simple-fs", features = ["full"] }
+# -- JSON-RPC
+rpc-router = { version = "=0.1.3" }
+# rpc-router = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-rpc-router" }
+# -- Others
+time = {version = "0.3", features = ["formatting", "parsing", "serde"]}
+derive_more = {version = "1.0.0-beta", features = ["from", "into", "display", "deref"] }
+strum = { version = "0.26", features = ["derive"] }
+# -- js/ts
+schemars = {version = "0.8"}

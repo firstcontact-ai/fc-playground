@@ -1,0 +1,96 @@
+# region    --- Build
+
+[[runners.build]]
+name = "ts_types"
+cmd = "cargo"
+args = ["run", "-p", "ts-types"]
+
+[[runners.build]]
+name = "pcss"
+working_dir = "frontend/"
+cmd = "npm"
+args = ["run", "pcss"]
+
+[[runners.build]]
+name = "sketchdev"
+working_dir = "frontend/"
+cmd = "npm"
+args = ["run", "sketchdev"]
+
+[[runners.build]]
+name = "rollup"
+working_dir = "frontend/"
+cmd = "npm"
+args = ["run", "rollup"]
+
+[[runners.build]]
+name = "tauri_build"
+working_dir = "crates/app-desktop/"
+cmd = "cargo"
+args = ["tauri", "build"]
+
+# endregion --- Build
+
+# region    --- Dev
+
+[[runners.dev]]
+name = "tauri_icons"
+working_dir = "crates/app-desktop/"
+when.no_file_at = "icons/32x32.png"
+cmd = "cargo"
+args = ["tauri", "icon", "icons/app-icon.png"]
+
+# Note: Does a first cargo build of the app-desktop.
+#       This seems to help the future build process.
+[[runners.dev]]
+name = "cargo_build_app_desktop"
+working_dir = "crates/app-desktop/"
+cmd = "cargo"
+args = ["build"]
+
+[[runners.dev]]
+ref = "build.ts_types"
+args_add = ["--", "-w"]
+concurrent = true 
+
+[[runners.dev]]
+ref = "build.pcss"
+args_add = [ "--", "-w"]
+concurrent = true 
+# if this process exit, end all other process
+end_all_on_exit = true
+
+[[runners.dev]]
+ref = "build.sketchdev"
+args_add = ["--", "-w"]
+concurrent = true
+# if this process exit, end all other process
+end_all_on_exit = true
+
+[[runners.dev]]
+ref = "build.rollup"
+args_add = ["--", "-w"]
+concurrent = true
+end_all_on_exit = true
+
+# no need for build
+[[runners.dev]]
+name = "webdev"
+cmd = "webdev"
+args = ["-d", "frontend/dist-ui", "-p", "8888", "-l"]
+concurrent = true
+# if this process exit, end all other process
+end_all_on_exit = true
+
+# no nee for ubild
+[[runners.dev]]
+name = "tauri_dev"
+working_dir = "crates/app-desktop"
+wait_before = 2000 # wait in ms, before getting called
+cmd = "cargo"
+args = ["tauri", "dev"]
+concurrent = true
+# if this process exit, end all other process
+end_all_on_exit = true
+
+# endregion --- Dev

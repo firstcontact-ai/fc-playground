@@ -1,0 +1,46 @@
+agents-v {
+	--nav-width: 16rem;
+
+	padding: var(--main-view-padding);
+
+	display: grid;
+	grid-template-rows: 3rem 1fr;
+
+	& > header {
+		display: grid;
+		grid-template-columns: 15rem 1fr;
+		align-items: center;
+		padding: 0 .825rem;
+
+		h2 {
+			display: grid;
+
+			d-ico.do-add {
+				cursor: pointer;
+				justify-self: end;
+				align-self: center;
+				width: 1.5rem;
+				height: 1.5rem;
+
+				&:hover {
+					fill: var(--ico-prime);
+				}
+			}
+		}
+
+		.back-to-space {
+			justify-self: end;
+		}
+	}
+
+	& > section.content {
+		display: grid;
+		grid-template-columns: 16rem 1fr;
+		gap: 1rem;
+
+		& > section {
+			display: grid;
+		}
+
+	}
+}

@@ -1,0 +1,17 @@
+[package]
+name = "lib-test-utils"
+edition = "2021"
+rust-version = "1.76"
+version = "0.1.0"
+
+[lib]
+doctest = false
+
+[lints]
+workspace = true
+
+[features]
+
+[dependencies]
+# -- Async
+tokio = { version = "1", features = ["full"] }

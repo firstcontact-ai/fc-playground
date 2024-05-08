@@ -1,0 +1,47 @@
+[package]
+name = "app-desktop"
+version = "0.0.0"
+edition = "2021"
+rust-version = "1.75"
+
+[lints] 
+workspace = true
+
+[lib]
+name = "fc_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-beta", features = ["config-toml"]  }
+
+[dependencies]
+# -- App Libs
+lib-core = { path = "../lib-core"}
+lib-rpc = { path = "../lib-rpc"}
+lib-ais = { path = "../lib-ais"}
+lib-utils = { path = "../lib-utils"}
+lib-workers = { path = "../lib-workers"}
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- Tauri
+tauri = { version = "2.0.0-beta.6", features = [] }
+tauri-plugin-shell = "2.0.0-beta.1"
+tauri-plugin-dialog = "2.0.0-beta.1"
+# -- Tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+# -- Json
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_with = { workspace = true }
+# -- Rpc
+rpc-router = { workspace = true }
+# -- Others
+derive_more = { workspace = true }
+
+
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]

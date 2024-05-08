@@ -1,0 +1,42 @@
+productName = "FirstContact"
+version = "0.0.0"
+identifier = "ai.firstcontact"
+
+[build]
+beforeDevCommand = ""
+beforeBuildCommand = ""
+devUrl = "http://localhost:8888/index.html"
+frontendDist = "../../frontend/dist-ui"
+
+[app]
+withGlobalTauri = true
+
+[[app.windows]]
+fullscreen = false
+resizable = true
+titleBarStyle = "Overlay"
+title = ""
+width = 800
+height = 900
+x = 3300
+y = 200
+
+# laptop
+# x = 2200
+# y = 200
+
+
+
+[bundle]
+active = true
+targets = "all"
+icon = [
+  "icons/32x32.png",
+  "icons/128x128.png",
+  "icons/128x128@2x.png",
+  "icons/icon.icns",
+  "icons/icon.ico"
+]
+
+[plugins.shell]
+open = true

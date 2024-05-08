@@ -1,0 +1,33 @@
+[package]
+name = "lib-workers"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+
+[lints]
+workspace = true
+
+[dependencies]
+# -- App Libs
+lib-core = { path = "../lib-core"}
+lib-utils = { path = "../lib-utils"}
+lib-ais = { path = "../lib-ais"}
+lib-splitters = { path = "../lib-splitters"}
+# -- Async
+tokio = { version = "1", features = ["full"] }
+# -- Data
+modql = { workspace = true }
+# -- Tracing
+tracing = { workspace = true }
+# -- Event
+flume = { workspace = true }
+# -- File
+simple-fs = { workspace = true }
+pathdiff = "0.2"
+# -- Others
+derive_more = { workspace = true }
+
+[dev-dependencies]
+lib-core = { path = "../lib-core", features = ["for-test"]}
+lib-ais = { path = "../lib-ais", features = ["for-test"]}
+lib-test-utils = { path = "../lib-test-utils"}

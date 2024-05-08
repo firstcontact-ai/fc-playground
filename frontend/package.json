@@ -1,0 +1,41 @@
+{
+  "name": "cvj",
+  "version": "0.1.0",
+  "description": "This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.",
+  "main": "index.js",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "tauri": "tauri",
+    "pcss": "pcss",
+    "rollup": "rollup -c",
+    "sketchdev": "sketchdev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@dom-native/draggable": "^0.2.1",
+    "@dom-native/ui": "file:../../../_projects/__dom-native/dom-native-ui_src",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@tauri-apps/api": "^2.0.0-beta.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0-beta.2",
+    "debounce": "^2.0.0",
+    "deep-object-diff": "^1.1.9",
+    "dom-native": "file:../../../_projects/__dom-native/dom-native_src",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "utils-min": "^0.2.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@tauri-apps/cli": "^2.0.0-beta.0",
+    "@types/bun": "latest",
+    "json-schema-to-typescript": "^13.1.2",
+    "pcss-cli": "^0.2.9",
+    "rollup": "^4.13.0",
+    "sketchdev": "^0.7.5",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.3"
+  }
+}

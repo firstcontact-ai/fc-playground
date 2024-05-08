@@ -1,0 +1,38 @@
+/** Customization of the @dom-native/ui look and feel */
+
+
+:root {
+	--d-field-bkg: var(--bkg-60);
+	--d-field-bdr: none;
+
+	--d-field-input: var(--txt-60);
+	--d-field-bkg-sel: var(--bkg-sel);
+
+	--d-field-choice-on-fill: var(--clr-prime);
+	--d-field-choice-on-focus-fill: var(--clr-prime);
+}
+
+
+d-input,
+d-textarea,
+d-select {
+	min-height: 2.75rem;
+
+	&.no-label {
+		grid-template-rows: 0 1fr;
+	}
+
+	&::part(box) {
+		border-radius: 5px;
+	}
+}
+
+d-textarea {
+	min-height: 4rem;
+}
+
+
+
+d-select-popup {
+	--d-select-popup-radius: 5px;
+}

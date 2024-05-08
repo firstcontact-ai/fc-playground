@@ -1,0 +1,35 @@
+agent-v {
+	display: grid;
+	padding-top: 1rem;
+
+	.form {
+		grid-template-rows: repeat(3, minmax(min-content, max-content)) 1fr auto;
+	}
+
+	.form__field.inst {
+		display: grid;
+		grid-template-columns: 8rem 1fr;
+		grid-template-rows: 2rem 1fr;
+
+
+		d-textarea {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+		}
+	}
+
+	.agent-tab-section {
+		display: none;
+		grid-template-rows: auto 1fr;
+
+		label {
+			padding: .5rem;
+			align-self: center;
+		}
+
+		&.sel {
+			display: grid;
+		}
+	}
+
+}
