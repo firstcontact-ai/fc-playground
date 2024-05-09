@@ -51,7 +51,7 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 sea-query = { version = "0.31.0-rc", features = ["thread-safe", "with-json"] }
 sea-query-rusqlite = { version = "0.6.0-rc", features = ["with-time", "with-json"]}
 rusqlite = { version = "0.31", features = [ "bundled"] }
-modql = { version = "=0.4.0-rc.5", features = ["with-sea-query", "with-rusqlite"] }
+modql = { version = "=0.4.0-rc.6", features = ["with-sea-query", "with-rusqlite"] }
 # modql = { path = "/Users/jeremychone/_jeremy/_rust/utils/rust-modql", features = [ "with-sea-query", "with-rusqlite"] }
 # -- Files
 simple-fs = { version = "0.1.3", features = ["full"] }

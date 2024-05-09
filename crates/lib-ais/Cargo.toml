@@ -35,7 +35,7 @@ serde_with = { workspace = true }
 tracing = { workspace = true }
 # -- AI
 ollama-rs = {version = "=0.1.9", features = ["stream"]}
-async-openai = "0.20"
+async-openai = "0.21"
 # -- Others
 derive_more = { workspace = true}
 enum_dispatch = "0.3"

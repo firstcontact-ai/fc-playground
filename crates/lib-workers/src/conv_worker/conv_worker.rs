@@ -104,7 +104,7 @@ mod tests {
 	#[tokio::test]
 	async fn test_conv_work_simple() -> Result<()> {
 		// -- Setup & Fixtures
-		init_trace();
+		// init_trace();
 		let mm = ModelManager::new().await?;
 		let aim = AiManager::default();
 		let (cfile_db, conv) = seed_all_for_test_runner(&mm).await?;
