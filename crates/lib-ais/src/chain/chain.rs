@@ -95,6 +95,7 @@ impl Chain {
 		Ok(chain)
 	}
 
+	#[allow(clippy::assigning_clones)]
 	pub fn get_el<'a>(&'a self, idxs: &[usize]) -> Option<ChainEl<'a>> {
 		// -- Initialize the iterator context
 		let mut f_els = Some(ChainEl::Chain(self));
@@ -103,6 +104,7 @@ impl Chain {
 		// -- Iterate and go down each time
 		for &idx in idxs {
 			f_el = f_els?.get_el(idx);
+			// TODO: remove clippy::assigning_clones Need to clean/optimize this below
 			f_els = f_el.clone();
 		}
 
