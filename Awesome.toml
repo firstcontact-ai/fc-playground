@@ -65,7 +65,7 @@ ref = "build.sketchdev"
 args_add = ["--", "-w"]
 concurrent = true
 # if this process exit, end all other process
-end_all_on_exit = true
+# end_all_on_exit = true
 
 [[runners.dev]]
 ref = "build.rollup"
